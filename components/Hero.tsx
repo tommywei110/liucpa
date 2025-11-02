@@ -26,7 +26,7 @@ export default function Hero() {
       {/* Content */}
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <p className="text-white text-xs sm:text-sm tracking-widest mb-8 sm:mb-12 font-avenir font-light">{t.subtitle}</p>
-        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-relaxed font-serif font-normal mb-8 sm:mb-12 md:mb-16">
+        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight sm:leading-normal md:leading-relaxed font-serif font-normal mb-8 sm:mb-12 md:mb-16">
           {t.title}
         </h2>
         <button className="bg-ocean-500 text-white px-8 sm:px-12 py-3 sm:py-4 hover:bg-ocean-600 transition text-xs sm:text-sm tracking-wider">
