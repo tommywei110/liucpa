@@ -29,10 +29,10 @@ export default function Testimonials() {
   const testimonial = about.testimonials[currentTestimonial]
 
   return (
-    <section id="about" className="bg-ocean-100 py-24">
+    <section id="about" className={`bg-ocean-100 pt-12 pb-12 ${language === "zh" ? "font-noto-serif-sc" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center relative">
-          <h2 className="text-center text-gray-500 uppercase tracking-[0.3em] text-sm font-avenir font-light mb-20">{about.title}</h2>
+          <h2 className={`text-center text-gray-500 uppercase tracking-[0.3em] text-sm font-light mb-20 ${language === "zh" ? "" : "font-avenir"}`}>{about.title}</h2>
 
           {/* Left Arrow */}
           <button
@@ -47,15 +47,15 @@ export default function Testimonials() {
           </button>
 
           <div className={`transition-opacity duration-300 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
-            <blockquote className="text-3xl md:text-4xl font-serif italic text-gray-800 leading-relaxed mb-16">
+            <blockquote className={`text-3xl md:text-4xl italic text-gray-800 leading-relaxed mb-16 ${language === "zh" ? "" : "font-serif"}`}>
               {testimonial.quote}
             </blockquote>
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-gray-400">—</span>
-              <p className="text-gray-600 font-avenir tracking-wider text-sm">{testimonial.name}</p>
+              <p className={`text-gray-600 tracking-wider text-sm ${language === "zh" ? "" : "font-avenir"}`}>{testimonial.name}</p>
               <span className="text-gray-400">—</span>
             </div>
-            <p className="text-gray-500 font-avenir tracking-wider text-sm uppercase mb-12">{testimonial.position}</p>
+            <p className={`text-gray-500 tracking-wider text-sm uppercase mb-12 ${language === "zh" ? "" : "font-avenir"}`}>{testimonial.position}</p>
 
             {/* Pagination Dots */}
             <div className="flex items-center justify-center gap-3">

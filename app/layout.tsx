@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat, Open_Sans, Playfair_Display, Rock_Salt, Cormorant, Merriweather, PT_Serif, Source_Serif_4, Libre_Baskerville } from 'next/font/google'
+import { Montserrat, Open_Sans, Playfair_Display, Rock_Salt, Cormorant, Merriweather, PT_Serif, Source_Serif_4, Libre_Baskerville, Liu_Jian_Mao_Cao, Noto_Sans_SC, Noto_Serif_SC } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
@@ -67,6 +67,27 @@ const libreBaskerville = Libre_Baskerville({
   display: 'swap',
 })
 
+const liuJianMaoCao = Liu_Jian_Mao_Cao({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-liu-jian-mao-cao',
+  display: 'swap',
+})
+
+const notoSansSC = Noto_Sans_SC({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-noto-sans-sc',
+  display: 'swap',
+})
+
+const notoSerifSC = Noto_Serif_SC({
+  weight: ['200', '300', '400', '500', '600', '700', '900'],
+  subsets: ['latin'],
+  variable: '--font-noto-serif-sc',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'Tax Experts - Professional CPA Services',
   description: 'Tax advisory for individuals & small businesses. Our Certified Accountants are experts in providing cutting edge tax advice for both personal and corporate clients.',
@@ -79,7 +100,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${openSans.variable} ${playfairDisplay.variable} ${rockSalt.variable} ${cormorant.variable} ${merriweather.variable} ${ptSerif.variable} ${sourceSerif4.variable} ${libreBaskerville.variable}`}>
+      <body className={`${montserrat.variable} ${openSans.variable} ${playfairDisplay.variable} ${rockSalt.variable} ${cormorant.variable} ${merriweather.variable} ${ptSerif.variable} ${sourceSerif4.variable} ${libreBaskerville.variable} ${liuJianMaoCao.variable} ${notoSansSC.variable} ${notoSerifSC.variable}`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

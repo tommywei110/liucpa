@@ -72,6 +72,10 @@ module.exports = {
         'pt-serif': ['var(--font-pt-serif)', 'Georgia', 'serif'],
         'source-serif-4': ['var(--font-source-serif-4)', 'Georgia', 'serif'],
         'libre-baskerville': ['var(--font-libre-baskerville)', 'Georgia', 'serif'],
+        'liu-jian-mao-cao': ['var(--font-liu-jian-mao-cao)', 'cursive'],
+        'zhi-ming-xing': ['Zhi Mang Xing', 'cursive', 'serif'],
+        'noto-sans-sc': ['var(--font-noto-sans-sc)', 'sans-serif'],
+        'noto-serif-sc': ['var(--font-noto-serif-sc)', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
