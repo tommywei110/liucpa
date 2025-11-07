@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/liucpa',
 }
 
 module.exports = nextConfig
