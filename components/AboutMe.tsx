@@ -22,7 +22,7 @@ export default function AboutMe() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-lg shadow-lg bg-gray-200">
               <Image
-                src="/liucpa/about-me-photo.jpg"
+                src="/about-me-photo.jpg"
                 alt="Professional photo"
                 fill
                 className="object-cover"
