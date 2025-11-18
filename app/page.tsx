@@ -1,9 +1,10 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import AboutMe from "@/components/AboutMe";
-import WeOffer from "@/components/WeOffer";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Hero from "@/app/Hero";
+import AboutMe from "@/app/AboutMe";
+import WeOffer from "@/app/WeOffer";
+import Testimonials from "@/app/Testimonials";
+import OurGuarantee from "@/app/OurGuarantee";
+import Footer from "@/components/shared/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutMe />
         <WeOffer />
         <Testimonials />
+        <OurGuarantee />
         <Footer />
       </main>
     </>

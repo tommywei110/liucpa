@@ -30,10 +30,11 @@ interface LanguageSelectorProps {
 export default function LanguageSelector({
   isScrolled = false,
 }: LanguageSelectorProps) {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, setHasExplicitlySetLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (lang: "en" | "zh") => {
+    setHasExplicitlySetLanguage(true);
     setLanguage(lang);
     setIsOpen(false);
   };
@@ -43,11 +44,7 @@ export default function LanguageSelector({
       {/* Desktop Dropdown */}
       <div className="hidden lg:block">
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-          <DropdownMenuTrigger
-            className={`text-white hover:text-ocean-100 font-light transition text-sm flex items-center gap-1 outline-none relative z-[51] ${
-              language === "zh" ? "font-noto-serif-sc" : ""
-            }`}
-          >
+          <DropdownMenuTrigger className="text-white hover:text-ocean-100 font-light transition text-sm flex items-center gap-1 outline-none relative z-[51]">
             <span>{languages[language].flag}</span>{" "}
             <span>{language === "en" ? "EN" : languages[language].name}</span>
             <ChevronDown className="h-3 w-3" />
@@ -55,8 +52,6 @@ export default function LanguageSelector({
           <DropdownMenuContent
             align="start"
             className={`z-[60] ${
-              language === "zh" ? "font-noto-serif-sc" : ""
-            } ${
               isScrolled
                 ? "bg-ocean-400/95 border-ocean-500 backdrop-blur-md"
                 : "bg-ocean-400/10 border-ocean-500/20 backdrop-blur-md"
@@ -83,11 +78,7 @@ export default function LanguageSelector({
       </div>
 
       {/* Mobile Buttons */}
-      <div
-        className={`flex items-center gap-3 lg:hidden ${
-          language === "zh" ? "font-noto-serif-sc" : ""
-        }`}
-      >
+      <div className="flex items-center gap-3 lg:hidden">
         <button
           onClick={() => handleLanguageChange("en")}
           className={`font-light px-3 py-1 rounded-full transition-all duration-300 text-sm ${

@@ -8,7 +8,7 @@ export const translations = {
       pricing: "Pricing",
       contact: "Contact",
       clientLogin: "Client Login",
-      companyName: "Liu CPA Co., PC",
+      companyName: "Liu CPA , PLLC",
       phone: "TEL: 123-456-7890",
     },
     // Hero Section
@@ -21,6 +21,7 @@ export const translations = {
     // About Me Section
     aboutMe: {
       title: "ABOUT ME",
+      name: "Meet Alex Liu, CPA",
       content:
         "Alex graduated from East China University in Shanghai with a Bachelor of Science in Accounting and earned her Master of Accounting from Washington University in St. Louis. She is a certified public accountant and a member of the AICPA (American Institute of Certified Public Accountants).",
       learnMore: "LEARN MORE",
@@ -99,6 +100,32 @@ export const translations = {
         },
       ],
     },
+    // Our Guarantee Section
+    ourGuarantee: {
+      title: "OUR GUARANTEE",
+      items: [
+        {
+          title: "Expert Bookkeeping, Tax and CPA Guidance",
+          description:
+            "We keep your books accurate and organized so your business runs smoothly. With strong CPA expertise, we help minimize your tax burden, maximize credits, and stay in full compliance—keeping you informed every step of the way.",
+        },
+        {
+          title: "Secure and Confidential Financial Handling",
+          description:
+            "Your privacy is important. We use secure platforms like TaxDome to protect your information and keep communications confidential.",
+        },
+        {
+          title: "1-Business-Day Response Guarantee",
+          description:
+            "Ask any questions, and we'll respond within one business day - no question is too small.",
+        },
+        {
+          title: "Transparent, No-Hidden-Fee Pricing",
+          description:
+            "You get a clear quote upfront. Our 60-day money-back guarantee ensures your satisfaction. If you're not happy, you can request a full refund, hassle-free.",
+        },
+      ],
+    },
     // Contact Section
     contactSection: {
       title: "Get In Touch",
@@ -112,7 +139,7 @@ export const translations = {
       address: "123 Main Street, Suite 100, New York, NY 10001",
       phone: "555-123-4567",
       wechat: "WeChat: alexliucpa",
-      copyright: "© 2025 by Liu CPA Co., PC. All Rights Reserved.",
+      copyright: "© 2025 by Liu CPA, PLLC. All Rights Reserved.",
       chatButton: "Let's Chat!",
     },
   },
@@ -138,6 +165,7 @@ export const translations = {
     // About Me Section
     aboutMe: {
       title: "关于我",
+      name: "认识 Alex Liu，注册会计师",
       content:
         "Alex 毕业于上海华东大学，获得会计学理学学士学位，并在圣路易斯华盛顿大学获得会计学硕士学位。她是一名注册会计师，也是美国注册会计师协会（AICPA）的成员。",
       learnMore: "了解更多",
@@ -210,6 +238,32 @@ export const translations = {
             '"卓越的服务和对税法的深入了解。他们对我们公司的成长非常宝贵。"',
           name: "金大卫",
           position: "金氏律师事务所管理合伙人",
+        },
+      ],
+    },
+    // Our Guarantee Section
+    ourGuarantee: {
+      title: "我们的保证",
+      items: [
+        {
+          title: "专业簿记、税务与注册会计师指导",
+          description:
+            "我们保持准确有序的账簿，确保您的业务顺利运行，同时提供专业的税务规划以减少您的税务责任并确保合规。凭借多年的注册会计师经验，我们处理复杂的税法，最大化您的税收抵免和扣除额，并在每一步都让您了解情况。",
+        },
+        {
+          title: "安全保密的财务处理",
+          description:
+            "您的隐私至关重要。我们使用 TaxDome 等安全平台来保护您的敏感信息并保持通信的机密性。",
+        },
+        {
+          title: "1个工作日回复保证",
+          description:
+            "我们优先处理您的问题，并保证在一个工作日内回复。没有询问太小；我们随时为您提供及时、清晰的答案。",
+        },
+        {
+          title: "透明定价，无隐藏费用",
+          description:
+            "获得直接透明的报价，没有意外。我们60天的退款保证表明我们对提供优质服务的信心。如果您不满意，可以轻松申请全额退款。",
         },
       ],
     },

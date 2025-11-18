@@ -5,12 +5,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import LanguageSelector from "./LanguageSelector";
 import { LogIn } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language].header;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const isHeaderSolid = isScrolled || !isHome;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-ocean-400" : "bg-transparent"
+        isHeaderSolid ? "bg-ocean-400" : "bg-transparent"
       }`}
     >
       <div className="flex items-center justify-between px-4 py-6">
@@ -59,19 +63,15 @@ export default function Header() {
         </button>
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <nav
-          className={`hidden lg:flex items-center space-x-8 px-6 ${
-            language === "zh" ? "font-noto-serif-sc" : ""
-          }`}
-        >
+        <nav className="hidden lg:flex items-center space-x-8 px-6">
           <a
-            href="#"
+            href="/"
             className="text-white hover:text-ocean-100 font-light transition text-sm"
           >
             {t.home}
           </a>
           <a
-            href="#about"
+            href="/about"
             className="text-white hover:text-ocean-100 font-light transition text-sm"
           >
             {t.about}
@@ -94,7 +94,7 @@ export default function Header() {
           >
             {t.contact}
           </a>
-          <LanguageSelector isScrolled={isScrolled} />
+          <LanguageSelector isScrolled={isHeaderSolid} />
         </nav>
 
         {/* Center Logo */}
@@ -112,11 +112,7 @@ export default function Header() {
         </div>
 
         {/* Right Section - Client Login */}
-        <div
-          className={`hidden md:flex items-center px-6 ${
-            language === "zh" ? "font-noto-serif-sc" : ""
-          }`}
-        >
+        <div className="hidden md:flex items-center px-6">
           <a
             href="#login"
             className="text-white hover:text-ocean-100 font-light transition text-sm flex items-center gap-1"
@@ -134,20 +130,16 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col h-full">
-          <nav
-            className={`flex flex-col pt-20 px-6 space-y-6 flex-grow ${
-              language === "zh" ? "font-noto-serif-sc" : ""
-            }`}
-          >
+          <nav className="flex flex-col pt-20 px-6 space-y-6 flex-grow">
             <a
-              href="#"
+              href="/"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-ocean-100 font-light transition text-lg"
             >
               {t.home}
             </a>
             <a
-              href="#about"
+              href="/about"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-ocean-100 font-light transition text-lg"
             >
@@ -186,7 +178,7 @@ export default function Header() {
 
           {/* Language Selector at Bottom */}
           <div className="px-6 pb-20">
-            <LanguageSelector isScrolled={isScrolled} />
+            <LanguageSelector isScrolled={isHeaderSolid} />
           </div>
         </div>
       </div>

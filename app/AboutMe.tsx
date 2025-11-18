@@ -1,18 +1,22 @@
-'use client'
+"use client";
 
-import { useLanguage } from '@/contexts/LanguageContext'
-import { translations } from '@/translations'
-import Image from 'next/image'
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
+import Image from "next/image";
 
 export default function AboutMe() {
-  const { language } = useLanguage()
-  const t = translations[language].aboutMe
+  const { language } = useLanguage();
+  const t = translations[language].aboutMe;
 
   return (
-    <section className={`bg-ocean-100 pt-12 pb-12 px-4 ${language === "zh" ? "font-noto-serif-sc" : ""}`}>
+    <section id="about-me" className="bg-white pt-12 pb-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className={`text-center text-gray-500 uppercase tracking-[0.3em] text-sm font-light mb-12 ${language === "zh" ? "" : "font-avenir"}`}>
+        <h2
+          className={`text-center text-gray-500 uppercase tracking-[0.3em] text-sm font-light mb-12 ${
+            language === "zh" ? "font-noto-serif-sc" : "font-avenir"
+          }`}
+        >
           {t.title}
         </h2>
 
@@ -29,7 +33,7 @@ export default function AboutMe() {
                 priority
                 onError={(e) => {
                   // Fallback if image doesn't exist
-                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.style.display = "none";
                 }}
               />
             </div>
@@ -37,7 +41,14 @@ export default function AboutMe() {
 
           {/* Content on the right */}
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <p className={`text-gray-700 leading-relaxed text-base md:text-lg text-left mb-6 ${language === "zh" ? "" : "font-avenir"}`}>
+            <h3
+              className={`text-gray-800 text-xl md:text-2xl font-bold mb-4 text-left ${
+                language === "zh" ? "font-noto-serif-sc" : "font-serif"
+              }`}
+            >
+              {t.name}
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg text-left mb-6 font-avenir">
               {t.content}
             </p>
             <button className="bg-[#1d3859] text-white px-6 sm:px-8 py-2 sm:py-3 hover:bg-[#152a43] transition text-xs sm:text-sm tracking-wider self-end">
@@ -47,6 +58,5 @@ export default function AboutMe() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
