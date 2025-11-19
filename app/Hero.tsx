@@ -6,6 +6,7 @@ import { translations } from "@/translations";
 export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language].hero;
+  const [heroLine1, heroLine2] = t.title.split("\n");
 
   return (
     <section className="relative py-32 px-8 overflow-hidden">
@@ -33,11 +34,18 @@ export default function Hero() {
             language === "zh" ? "font-noto-serif-sc" : "font-serif"
           }`}
         >
-          {t.title}
+          <span className="block">{heroLine1}</span>
+          {heroLine2 && <span className="block font-normal">{heroLine2}</span>}
         </h2>
-        <button className="bg-[#1d3859] text-white px-6 sm:px-8 py-2 sm:py-3 hover:bg-[#152a43] transition text-xs sm:text-sm tracking-wider">
-          {t.cta}
-        </button>
+        <a
+          href="https://form.jotform.com/253210540369148"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-[#B89030] text-white px-6 sm:px-8 py-2 sm:py-3 hover:bg-[#a68028] transition text-xs sm:text-sm tracking-wider rounded-md">
+            {t.cta}
+          </button>
+        </a>
       </div>
     </section>
   );

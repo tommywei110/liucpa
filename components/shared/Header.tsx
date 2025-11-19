@@ -1,15 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
-import LanguageSelector from "./LanguageSelector";
 import { LogIn } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const { language } = useLanguage();
-  const t = translations[language].header;
+  const t = translations.en.header;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -77,34 +74,24 @@ export default function Header() {
             {t.about}
           </a>
           <a
-            href="#services"
+            href="/services"
             className="text-white hover:text-ocean-100 font-light transition text-sm"
           >
             {t.services}
           </a>
+
           <a
-            href="#pricing"
-            className="text-white hover:text-ocean-100 font-light transition text-sm"
-          >
-            {t.pricing}
-          </a>
-          <a
-            href="#contact"
+            href="/contact"
             className="text-white hover:text-ocean-100 font-light transition text-sm"
           >
             {t.contact}
           </a>
-          <LanguageSelector isScrolled={isHeaderSolid} />
         </nav>
 
         {/* Center Logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <h1
-            className={`text-white tracking-wide whitespace-nowrap leading-relaxed py-1 ${
-              language === "zh"
-                ? "font-zhi-ming-xing text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-                : "font-cursive text-lg sm:text-xl md:text-2xl"
-            }`}
+            className="text-white tracking-wide whitespace-nowrap leading-relaxed py-1 font-cursive text-lg sm:text-xl md:text-2xl"
             style={{ lineHeight: "1.8" }}
           >
             {t.companyName}
@@ -146,39 +133,32 @@ export default function Header() {
               {t.about}
             </a>
             <a
-              href="#services"
+              href="/services"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-ocean-100 font-light transition text-lg"
             >
               {t.services}
             </a>
+
             <a
-              href="#pricing"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white hover:text-ocean-100 font-light transition text-lg"
-            >
-              {t.pricing}
-            </a>
-            <a
-              href="#contact"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-ocean-100 font-light transition text-lg"
             >
               {t.contact}
             </a>
+          </nav>
+
+          {/* Mobile Client Login at bottom */}
+          <div className="px-6 pb-10">
             <a
               href="#login"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="md:hidden text-white hover:text-ocean-100 font-light transition text-lg flex items-center gap-2"
+              className="text-white hover:text-ocean-100 font-light transition text-lg flex items-center gap-2"
             >
               <LogIn className="h-5 w-5" />
               {t.clientLogin}
             </a>
-          </nav>
-
-          {/* Language Selector at Bottom */}
-          <div className="px-6 pb-20">
-            <LanguageSelector isScrolled={isHeaderSolid} />
           </div>
         </div>
       </div>

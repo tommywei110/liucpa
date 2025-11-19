@@ -26,7 +26,7 @@ export default function AboutMe() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-lg shadow-lg bg-gray-200">
               <Image
-                src="/about-me-photo.jpg"
+                src="/1000226553.JPG"
                 alt="Professional photo"
                 fill
                 className="object-cover"
@@ -51,9 +51,12 @@ export default function AboutMe() {
             <p className="text-gray-700 leading-relaxed text-base md:text-lg text-left mb-6 font-avenir">
               {t.content}
             </p>
-            <button className="bg-[#1d3859] text-white px-6 sm:px-8 py-2 sm:py-3 hover:bg-[#152a43] transition text-xs sm:text-sm tracking-wider self-end">
+            <a
+              href="/about"
+              className="bg-[#1d3859] text-white px-6 sm:px-8 py-2 sm:py-3 hover:bg-[#152a43] transition text-xs sm:text-sm tracking-wider self-end inline-flex items-center justify-center"
+            >
               {t.learnMore}
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -39,11 +39,16 @@ Outside of work, Alex enjoys baking, gardening, snowboarding, and mountain bikin
                 {para}
               </p>
             ))}
-          {/* Round picture placeholder */}
-          <div
-            className="mt-6 w-40 h-40 md:w-56 md:h-56 rounded-full bg-gray-200 border border-gray-300"
-            aria-label="profile image placeholder"
-          />
+          {/* Round profile image */}
+          <div className="mt-6 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border border-gray-300 relative">
+            <Image
+              src="/aboutpic.jpg"
+              alt="Portrait of Alex Liu, CPA"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

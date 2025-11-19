@@ -70,23 +70,29 @@ export default function Testimonials() {
               isAnimating ? "opacity-0" : "opacity-100"
             }`}
           >
-            <blockquote
-              className={`text-3xl md:text-4xl italic text-gray-800 leading-relaxed mb-16 ${
-                language === "zh" ? "font-noto-serif-sc" : "font-serif"
-              }`}
-            >
-              {testimonial.quote}
-            </blockquote>
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-gray-400">—</span>
-              <p className="text-gray-600 tracking-wider text-sm font-avenir">
-                {testimonial.name}
-              </p>
-              <span className="text-gray-400">—</span>
+            <div className="min-h-[320px] md:min-h-[260px] flex flex-col justify-center">
+              <blockquote
+                className={`text-3xl md:text-4xl italic text-gray-800 leading-relaxed mb-16 ${
+                  language === "zh" ? "font-noto-serif-sc" : "font-serif"
+                }`}
+              >
+                {testimonial.quote}
+              </blockquote>
+              {(testimonial.name || testimonial.position) && (
+                <>
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <span className="text-gray-400">—</span>
+                    <p className="text-gray-600 tracking-wider text-sm font-avenir">
+                      {testimonial.name}
+                    </p>
+                    <span className="text-gray-400">—</span>
+                  </div>
+                  <p className="text-gray-500 tracking-wider text-sm uppercase mb-12 font-avenir">
+                    {testimonial.position}
+                  </p>
+                </>
+              )}
             </div>
-            <p className="text-gray-500 tracking-wider text-sm uppercase mb-12 font-avenir">
-              {testimonial.position}
-            </p>
 
             {/* Pagination Dots */}
             <div className="flex items-center justify-center gap-3">
