@@ -5,7 +5,7 @@ import { translations } from "@/translations";
 
 export default function Hero() {
   const { language } = useLanguage();
-  const t = translations[language].hero;
+  const t = translations[language as "en"].hero;
   const [heroLine1, heroLine2] = t.title.split("\n");
 
   return (

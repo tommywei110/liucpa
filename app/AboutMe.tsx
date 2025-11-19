@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   const { language } = useLanguage();
-  const t = translations[language].aboutMe;
+  const t = translations[language as "en"].aboutMe;
 
   return (
     <section id="about-me" className="bg-white pt-12 pb-12 px-4">

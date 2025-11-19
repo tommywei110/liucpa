@@ -6,7 +6,7 @@ import { BookOpen, Key, Clock, DollarSign } from "lucide-react";
 
 export default function OurGuarantee() {
   const { language } = useLanguage();
-  const t = translations[language].ourGuarantee;
+  const t = translations[language as "en"].ourGuarantee;
 
   const icons = [
     BookOpen, // Trusted Books & Tax Planning

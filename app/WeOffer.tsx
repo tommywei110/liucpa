@@ -19,7 +19,7 @@ export default function WeOffer({
   hideServicesGrid,
 }: WeOfferProps) {
   const { language } = useLanguage();
-  const t = translations[language].weOffer;
+  const t = translations[language as "en"].weOffer;
 
   return (
     <section

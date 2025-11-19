@@ -6,7 +6,7 @@ import { translations } from "@/translations";
 
 export default function Testimonials() {
   const { language } = useLanguage();
-  const about = translations[language].about;
+  const about = translations[language as "en"].about;
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
