@@ -14,7 +14,7 @@ Alex takes pride in her precision, integrity, and commitment to her clients’ s
 Outside of work, Alex enjoys baking, gardening, snowboarding, and mountain biking with her husband, fully embracing Utah’s beautiful outdoors and vibrant seasons.`;
 
   return (
-    <section className="bg-white pt-28 pb-16 px-4">
+    <section className="bg-white pt-8 pb-16 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Text Only */}
         <div>
@@ -32,9 +32,7 @@ Outside of work, Alex enjoys baking, gardening, snowboarding, and mountain bikin
             .map((para, idx) => (
               <p
                 key={idx}
-                className={`text-gray-700 leading-relaxed text-base md:text-lg font-avenir whitespace-pre-line text-left ${
-                  idx === 0 ? "mb-6" : "mb-[0.7rem]"
-                }`}
+                className="text-gray-700 leading-relaxed text-base md:text-lg font-avenir whitespace-pre-line text-left mb-6"
               >
                 {para}
               </p>
@@ -45,7 +43,7 @@ Outside of work, Alex enjoys baking, gardening, snowboarding, and mountain bikin
               src="/aboutpic.jpg"
               alt="Portrait of Alex Liu, CPA"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               priority
             />
           </div>

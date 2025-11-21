@@ -9,7 +9,7 @@ export default function AboutPage() {
       <main className="min-h-screen pt-24">
         <AboutIntro />
       </main>
-      <Footer contactOnly />
+      <Footer contactOnly hideChatButton />
     </>
   );
 }

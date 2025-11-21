@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { translations } from "@/translations";
-import { LogIn } from "lucide-react";
+import { User } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -79,7 +80,12 @@ export default function Header() {
           >
             {t.services}
           </a>
-
+          <a
+            href="/pricing"
+            className="text-white hover:text-ocean-100 font-light transition text-sm"
+          >
+            {t.pricing}
+          </a>
           <a
             href="/contact"
             className="text-white hover:text-ocean-100 font-light transition text-sm"
@@ -89,13 +95,15 @@ export default function Header() {
         </nav>
 
         {/* Center Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <h1
-            className="text-white tracking-wide whitespace-nowrap leading-relaxed py-1 font-cursive text-lg sm:text-xl md:text-2xl"
-            style={{ lineHeight: "1.8" }}
-          >
-            {t.companyName}
-          </h1>
+        <div className="absolute left-1/2 transform -translate-x-1/2 py-1">
+          <Image
+            src="/Blue White Simple Modern Monogram AL Logo.png"
+            alt={t.companyName}
+            width={880}
+            height={240}
+            className="h-32 sm:h-40 md:h-44 w-auto object-contain"
+            priority
+          />
         </div>
 
         {/* Right Section - Client Login */}
@@ -104,7 +112,7 @@ export default function Header() {
             href="#login"
             className="text-white hover:text-ocean-100 font-light transition text-sm flex items-center gap-1"
           >
-            <LogIn className="h-4 w-4" />
+            <User className="h-4 w-4" />
             {t.clientLogin}
           </a>
         </div>
@@ -139,7 +147,13 @@ export default function Header() {
             >
               {t.services}
             </a>
-
+            <a
+              href="/pricing"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-white hover:text-ocean-100 font-light transition text-lg"
+            >
+              {t.pricing}
+            </a>
             <a
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -156,7 +170,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-ocean-100 font-light transition text-lg flex items-center gap-2"
             >
-              <LogIn className="h-5 w-5" />
+              <User className="h-5 w-5" />
               {t.clientLogin}
             </a>
           </div>

@@ -5,7 +5,7 @@ export const translations = {
       home: "Home",
       about: "About",
       services: "Services",
-
+      pricing: "Pricing",
       contact: "Contact",
       clientLogin: "Client Login",
       companyName: "Liu CPA , PLLC",
@@ -24,7 +24,7 @@ export const translations = {
       title: "ABOUT ME",
       name: "Meet Alex Liu, CPA",
       content:
-        "Alex graduated from East China University in Shanghai with a Bachelor of Science in Accounting and earned her Master of Accounting from Washington University in St. Louis. She is a certified public accountant and a member of the AICPA (American Institute of Certified Public Accountants).",
+        "Alex graduated from East China University in Shanghai with a Bachelor of Science in Accounting and earned her Master of Accounting from Washington University in St. Louis. She is a certified public accountant and a member of the AICPA (American Institute of Certified Public Accountants). She is now living in Salt Lake City, Utah with her husband and four pets.",
       learnMore: "LEARN MORE",
     },
     // We Offer Section
@@ -43,7 +43,7 @@ export const translations = {
       service3: {
         title: "Consulting",
         description:
-          "We provide consulting services tailored to your business, including QuickBooks setup, account cleanup, IRS audit representation, and payroll system setup. Have questions? We are here to help.",
+          "We provide consulting services tailored to you and your business, including QuickBooks setup, account cleanup, IRS audit representation, and payroll system setup. Have questions? We are here to help.",
       },
       cta: "SEE ALL SERVICES",
     },
@@ -121,7 +121,7 @@ export const translations = {
       title: "GET IN TOUCH",
       address: "123 Main Street, Suite 100, New York, NY 10001",
       phone: "801-895-2011",
-      wechat: "WeChat: alexliucpa",
+      wechat: "alexliucpa",
       copyright: "© 2025 by Liu CPA, PLLC. All Rights Reserved.",
       chatButton: "Let's Chat!",
     },

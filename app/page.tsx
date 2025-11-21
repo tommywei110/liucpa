@@ -16,7 +16,7 @@ export default function Home() {
         <WeOffer />
         <Testimonials />
         <OurGuarantee />
-        <Footer />
+        <Footer hideChatButton />
       </main>
     </>
   );

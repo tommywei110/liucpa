@@ -7,11 +7,15 @@ export default function ContactPage() {
     <>
       <Header />
       <main className="min-h-screen pt-24 bg-white">
-        <section className="bg-white pt-28 pb-16 px-4">
+        <section className="bg-white pt-8 pb-16 px-4">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-gray-800 text-3xl md:text-5xl font-normal mb-8 font-serif">
+            <h1 className="text-gray-800 text-3xl md:text-5xl font-normal mb-4 font-serif">
               Get In Touch
             </h1>
+            <p className="text-gray-700 text-base md:text-lg font-avenir mb-4">
+              You can reach us by phone, text, email, or by scheduling a meeting
+              online during business hours.
+            </p>
             <div className="w-full mb-8">
               <div
                 className="calendly-inline-widget w-full"
@@ -79,7 +83,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <Footer hideGetInTouch hideChatButton />
+      <Footer contactOnly hideChatButton />
     </>
   );
 }
